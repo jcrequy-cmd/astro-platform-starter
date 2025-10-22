@@ -1,27 +1,39 @@
-const navItems = [
-    { linkText: 'Home', href: '/' },
-    { linkText: 'Revalidation', href: '/revalidation' },
-    { linkText: 'Image CDN', href: '/image-cdn' },
-    { linkText: 'Edge Function', href: '/edge' },
-    { linkText: 'Blobs', href: '/blobs' }
-];
+---
+import navItems from "../data/navigation"; // ou l’endroit où se trouve ton tableau de liens
+import logo from "./Logo-mssbb-1.png"; // on importe ton image
 ---
 
-<nav class="flex flex-wrap items-center gap-4 pt-6 pb-16 sm:pt-12 sm:pb-24">
-    <a href="/">
-         <img src="/Logo-msbb-1.png" alt="Makerspace Biel-Bienne" width="120" />
+<header class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+  <nav class="flex flex-wrap items-center gap-4 pt-6 pb-16 sm:pt-12 sm:pb-24">
+    
+    <!-- Logo cliquable -->
+    <a href="/" class="flex items-center">
+      <img 
+        src={logo.src} 
+        alt="Logo du Makerspace Biel-Bienne" 
+        width="120" 
+        height="auto" 
+        class="rounded-md"
+      />
     </a>
+
+    <!-- Menu de navigation -->
     {
-        !!navItems?.length && (
-            <ul class="flex flex-wrap gap-x-4 gap-y-1">
-                {navItems.map((item) => (
-                    <li>
-                        <a href={item.href} class="inline-block px-1.5 py-1 sm:px-3 sm:py-2">
-                            {item.linkText}
-                        </a>
-                    </li>
-                ))}
-            </ul>
-        )
+      !!navItems?.length && (
+        <ul class="flex flex-wrap gap-x-4 gap-y-1 ml-auto text-lg">
+          {navItems.map((item) => (
+            <li>
+              <a 
+                href={item.href} 
+                class="inline-block px-1.5 py-1 sm:px-3 sm:py-2 hover:text-red-600 transition-colors duration-200"
+              >
+                {item.linkText}
+              </a>
+            </li>
+          ))}
+        </ul>
+      )
     }
-</nav>
+
+  </nav>
+</header>
