@@ -44,14 +44,14 @@ const texts = {
       <li><a href="/projets" class="hover:text-gray-500">Projets</a></li>
       <li><a href="/statuts" class="hover:text-gray-500">Statuts</a></li>
       <li><a href="/contact" class="hover:text-gray-500">Contact</a></li>
-   
- <!-- Sélecteur de langue -->
-        <li class="flex items-center space-x-2">
-          <a href="/fr" class="font-medium hover:text-primary">FR</a>
-          <span>|</span>
-          <a href="/de" class="font-medium hover:text-primary">DE</a>
-        </li>
-      </ul>
+
+      <!-- Sélecteur de langue -->
+      <li class="flex gap-2 ml-6">
+        <button class="text-gray-700 hover:text-gray-900 font-medium">FR</button>
+        <span>|</span>
+        <button class="text-gray-700 hover:text-gray-900 font-medium">DE</button>
+      </li>
+    </ul>
 
     <!-- Bouton hamburger (mobile) -->
     <button id="menu-toggle" class="md:hidden text-gray-800 focus:outline-none">
