@@ -9,16 +9,21 @@ export default function Header() {
     <header className="relative bg-complementary text-white">
       {/* Bande supérieure */}
       <div className="flex items-center justify-between max-w-7xl mx-auto px-6 sm:px-12 py-4 z-10 relative bg-white">
-        {/* Logo + nom */}
-        <a href="/" className="flex items-center gap-3">
-          <img
-            src="/images/logo-msbb-1.png"
-            alt="Logo Makerspace"
-            width="50"
-            height="50"
-          />
-          <span className="text-3xl font-bold text-black no-underline">Makerspace Biel-Bienne</span>
-        </a>
+        
+        {/* Logo + nom avec flex-grow pour éviter le chevauchement */}
+        <div className="flex-grow flex items-center">
+          <a href="/" className="flex items-center gap-3">
+            <img
+              src="/images/logo-msbb-1.png"
+              alt="Logo Makerspace"
+              width="50"
+              height="50"
+            />
+            <span className="text-3xl font-bold text-black no-underline">
+              Makerspace Biel-Bienne
+            </span>
+          </a>
+        </div>
 
         {/* Hamburger / croix */}
         <button
